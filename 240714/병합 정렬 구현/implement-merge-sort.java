@@ -2,13 +2,14 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static int[] sorted;
+    public static int[] tmp;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
+        tmp = new int[n];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -37,7 +38,6 @@ public class Main {
     }
 
     public static void merge(int[] arr, int low, int mid, int high){
-        int[] tmp = new int[arr.length];
         int i = low;
         int j = mid+1;
         int k = low;
