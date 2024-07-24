@@ -56,7 +56,11 @@ public class Main {
         }
 
         for(int i = 2; i <= n; i++)
-            bw.write(String.valueOf(dist[i])+ "\n");
+            if(dist[i] == (int)1e9){
+                bw.write("\n");
+            }else{
+                bw.write(String.valueOf(dist[i])+ "-1\n");
+            }
 
         bw.flush();
         bw.close();
